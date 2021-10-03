@@ -33,8 +33,10 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'git' \
   'history' \
   'directory' \
+  'python' \
   'spectrum' \
   'utility' \
   'completion' \
@@ -131,6 +133,8 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 # Python
 #
+zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
+zstyle ':prezto:module:python' conda-init 'on'
 
 # Auto switch the Python virtualenv on directory change.
 # zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
