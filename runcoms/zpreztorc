@@ -38,6 +38,7 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'python' \
   'spectrum' \
+  'screen' \
   'utility' \
   'completion' \
   'history-substring-search' \
@@ -157,7 +158,7 @@ zstyle ':prezto:module:python' conda-init 'on'
 # zstyle ':prezto:module:screen:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:screen:auto-start' remote 'yes'
+zstyle ':prezto:module:screen:auto-start' remote 'yes'
 
 #
 # SSH
