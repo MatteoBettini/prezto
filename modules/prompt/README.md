@@ -42,7 +42,7 @@ directory.
 
 ### Required Variables
 
-To ensure that your function works with the editor-info module you'll need to
+To ensure that your fn works wunctioith the editor-info module you'll need to
 set the following variable in _`${ZDOTDIR:-$HOME}/.zpreztorc`_:
 
 ```sh
