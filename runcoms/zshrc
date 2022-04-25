@@ -12,4 +12,29 @@ fi
 
 # Customize to your needs...
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/local/scratch/mb2389/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/local/scratch/mb2389/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/local/scratch/mb2389/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/local/scratch/mb2389/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+conda activate marl
 
+umask 006
+
+export PATH=$PATH:/usr/local/cuda/bin                                   
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+export RLLIB_NUM_GPUS="1"  
+export CUDA_VISIBLE_DEVICES="2,3"
+export SDL_VIDEODRIVER="dummy"
+export PYTHONPATH="$PYTHONPATH:/local/scratch/mb2389/gippo/"
+export WANDB_START_METHOD="thread"
+export DISPLAY=":1"

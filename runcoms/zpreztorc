@@ -43,8 +43,6 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'screen' \
   'utility' \
-  'homebrew' \
-  'macports' \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
