@@ -1,0 +1,47 @@
+shell "/usr/bin/zsh"
+
+# This line makes Detach and Re-attach without losing the regions/windows layout
+layout save default
+
+# Turn off the welcome message
+startup_message off
+
+# Disable visual bell
+vbell off
+
+# Set scrollback buffer to 10000
+defscrollback 10000
+
+# Customize the status line
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+#Bind to move between regions
+bind -k kl focus left
+bind -k kr focus right
+bind -k ku focus up
+bind -k kd focus down
+
+setenv kinit 'while true; do kinit mb2389@DC.CL.CAM.AC.UK -l 99d -r 99d -kt /local/scratch/mb2389/keytabs/mb2389.keytab; sleep 3600; done'
+
+# default windows
+screen -t General  0 zsh
+screen -t CPU  1 htop
+screen -t GPU  2 gpustat --watch -ucp
+screen -t Kinit 3 zsh -c $kinit
+select 0
+
+# Layouts
+layout autosave on
+layout new one
+select 0
+split -v
+focus right
+select 1
+split
+focus down
+select 2
+focus left
+resize -h +100
+
+layout attach one
