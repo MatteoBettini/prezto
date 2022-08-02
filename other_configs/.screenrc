@@ -27,7 +27,7 @@ setenv kinit 'while true; do kinit mb2389@DC.CL.CAM.AC.UK -l 99d -r 99d -kt /loc
 # default windows
 screen -t General  0 zsh
 screen -t CPU  1 htop
-screen -t GPU  2 gpustat --watch -ucp
+screen -t GPU  2 watch --color "gpustat --color -ucp"
 screen -t Kinit 3 zsh -c $kinit
 select 0
 
@@ -42,6 +42,6 @@ split
 focus down
 select 2
 focus left
-resize -h +100
+resize -h +50
 
 layout attach one
