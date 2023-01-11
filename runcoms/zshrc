@@ -25,6 +25,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-conda activate marl
-export PYTHONPATH="$PYTHONPATH:/Users/Matteo/PycharmProjects/gippo/"
+conda activate rllib
+
+export PYTHONPATH="$PYTHONPATH:/Users/Matteo/PycharmProjects/HetGPPO/"
 
