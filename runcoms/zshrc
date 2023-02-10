@@ -30,9 +30,8 @@ conda activate rllib
 
 umask 006
 
-export PATH=$PATH:/usr/local/cuda/bin                                   
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/local/scratch/mb2389/miniconda3/lib
+# export PATH=$PATH:/usr/local/cuda/bin                                   
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 
 export RLLIB_NUM_GPUS="1"
 export SDL_VIDEODRIVER="dummy"
