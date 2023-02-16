@@ -37,7 +37,7 @@ bind c stuff "screen -X chdir $PWD; screen^M"
 screen -t General 0 zsh
 screen -t CPU  1 htop
 screen -t GPU  2 zsh 
-stuff "watch --color gpustat --color -ucp^M"
+stuff "watch --color gpustat --color -ucpP^M"
 screen -t Kinit 3 zsh
 stuff "while true; do kinit mb2389@DC.CL.CAM.AC.UK -l 99d -r 99d -kt /local/scratch/mb2389/keytabs/mb2389.keytab; sleep 3600; done^M"
 screen -t zsh 4 zsh
