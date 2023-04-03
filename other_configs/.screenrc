@@ -30,9 +30,6 @@ bind -k kr focus right
 bind -k ku focus up
 bind -k kd focus down
 
-# WHen creating a new window, do it in the current dir
-bind c stuff "screen -X chdir $PWD; screen^M"
-
 # default windows
 screen -t General 0 zsh
 screen -t CPU  1 htop
