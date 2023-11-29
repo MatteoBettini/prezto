@@ -25,7 +25,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-conda activate rllib
+conda activate torchrl
 
 export PYTHONPATH="$PYTHONPATH:/Users/Matteo/PycharmProjects/HetGPPO/"
-
+export SC2PATH="/Applications/StarCraft II"
